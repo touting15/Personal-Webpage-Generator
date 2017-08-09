@@ -1,0 +1,28 @@
+create database final_project;
+use final_project;
+
+
+create table users(username varchar(50) NOT NULL PRIMARY KEY, password varchar(255) NOT NULL, name varchar(50) NOT NULL, email varchar(50) NOT NULL, about varchar(1000), twitter varchar(50), instagram varchar(50), facebook varchar(50), github varchar(50));
+
+create table projects(username varchar(50), name varchar(50) NOT NULL, description varchar(200),  image BLOB, FOREIGN KEY (username) REFERENCES Users(username));
+
+
+
+If you are not using mariaDB but using mysql:
+-----------------------------------------------------------------------------------------------------
+create database final_project;
+use final_project;
+create table users(username varchar(50) NOT NULL, password varchar(255) NOT NULL, name varchar(50) NOT NULL, email varchar(50) NOT NULL, about varchar(1000), twitter varchar(50), instagram varchar(50), facebook varchar(50), github varchar(50), PRIMARY KEY (username));
+
+create table projects(username varchar(50) NOT NULL, name varchar(50) NOT NULL, description varchar(200),  image BLOB, FOREIGN KEY (username) REFERENCES users(username));
+
+
+--------------------------------------------------
+In order to allow bigger blob sizes, use longblob in the table creation:
+-----------------------------------------------------------------------
+
+create table users(username varchar(50) NOT NULL, password varchar(255) NOT NULL, name varchar(50) NOT NULL, email varchar(50) NOT NULL, about varchar(1000), twitter varchar(50), instagram varchar(50), facebook varchar(50), github varchar(50), user_picture LONGBLOB, PRIMARY KEY (username));
+
+create table projects(username varchar(50) NOT NULL, name varchar(50) NOT NULL, description varchar(200),  image LONGBLOB, FOREIGN KEY (username) REFERENCES users(username));
+
+

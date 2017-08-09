@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- A non logged in user can either sign up, or view all users within the application -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Resume Palace</title>
+        <link rel="stylesheet" type="text/css" href="../css/mainstyle.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    </head>
+
+    <body>
+<div class="container">
+        <h1><u> Welcome to the ResumeBlog</u></h1>
+
+<form action="login.php" method="post" class="form-inline">
+    <div class="form-group">
+      <fieldset>
+        <label class="control-label"><b>Username</b></label>
+        <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+      </fieldset>
+        <label><b>Password</b></label>
+        <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+        <button type="submit">Sign in</button>
+
+    </div>
+</form>
+
+<br>
+<form class="form-inline" action="../create_account/create.html" method="get">
+            <button type="submit">Sign up</button>
+</form>
+
+<form class="form-inline" action="../public_page/viewaccounts.php" method="get">
+  <button type="submit">View all users</button>
+</form>
+
+</div>
+
+
+    </body>
+</html>

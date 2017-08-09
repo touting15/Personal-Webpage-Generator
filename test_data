@@ -1,0 +1,3 @@
+INSERT into users VALUES("foo", 1234, "foo bar", "foo@bar.com", "N/A", null, null, null ,null); 
+INSERT into users VALUES("test_user", 4321, "test user", "test@bar.com", "N/A", null, null, null, null);
+INSERT into users VALUES("test_user2", "random_password", "test user2", "test_user2@bar.com", "N/A", null, null, null, null);

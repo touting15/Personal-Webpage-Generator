@@ -1,0 +1,11 @@
+A list of todo's that anyone can add to or take off the list:
+
+Check that username is not already in database in account creation - login/login.php
+Check that email is not in use, and is in a valid format - create.php
+Check that name does not already exist in DB. - create.php
+Hash the password before entering it into the DB - create.php
+
+
+Handle file uploads and insertion into database properly (Project Images) - update_account/update.php
+
+Change password feature
